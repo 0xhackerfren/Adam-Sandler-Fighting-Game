@@ -1,0 +1,3 @@
+import {test,expect} from '@playwright/test';
+test.use({viewport:{width:390,height:844},hasTouch:true,isMobile:true});
+test('phone can start arcade and reach all touch controls',async({page})=>{await page.goto('/');await page.locator('[data-fighter="hubie"]').tap();await expect(page.locator('.abilityInfo')).toContainText('SAFETY FIRST');await page.locator('#solo').tap();await expect(page.locator('#canvas canvas')).toBeVisible();await expect(page.locator('.joystick')).toBeVisible();await expect(page.locator('[data-key="ability"]')).toBeVisible();await expect(page.locator('[data-key="special"]')).toBeVisible();await expect(page.locator('#modeLabel')).toContainText('STAGE 1/5');await expect(page.locator('#voiceCaption')).toBeAttached();});

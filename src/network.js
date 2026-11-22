@@ -1,6 +1,6 @@
 import Peer from 'peerjs';
 const opts=()=>({...(import.meta.env.VITE_PEER_HOST?{host:import.meta.env.VITE_PEER_HOST,port:Number(import.meta.env.VITE_PEER_PORT||443),secure:true,path:import.meta.env.VITE_PEER_PATH||'/'}:{})});
-const prefix='sandler-showdown-v2-';
+const prefix='sandler-showdown-v3-';
 const openPeer=id=>new Promise((resolve,reject)=>{const p=id?new Peer(prefix+id,opts()):new Peer(opts());let settled=false;const t=setTimeout(()=>{p.destroy();reject(new Error('Signaling timed out'));},9000);p.once('open',()=>{settled=true;clearTimeout(t);resolve(p);});p.on('error',e=>{if(!settled){settled=true;clearTimeout(t);p.destroy();reject(e);}});});
 export class Multiplayer{constructor(onMessage,onStatus){this.onMessage=onMessage;this.status=onStatus;this.peer=null;this.conn=null;this.host=false;this.epoch=0;}
  close(){this.epoch++;this.conn?.close();this.peer?.destroy();this.peer=null;this.conn=null;}

@@ -8,3 +8,11 @@ export const fighters = [
 ];
 export const arenas = [{id:'green',name:'The Back Nine',ground:0x344f38,sky:0x151e31,accent:0x90d46b},{id:'school',name:'After School',ground:0x585369,sky:0x25203a,accent:0xf4b567},{id:'boardwalk',name:'Disco Boardwalk',ground:0x3d315d,sky:0x111328,accent:0xe768d9}];
 export const byId = id => fighters.find(f=>f.id===id) || fighters[0];
+export const abilities={
+ happy:{name:'Power Up',cooldown:9,duration:4,description:'Next heavy or special hit gains bonus power and a dramatic bounce.'},
+ billy:{name:'Sugar Rush',cooldown:10,duration:5,description:'Quicker recovery and faster movement for five seconds.'},
+ bobby:{name:'Hydrate',cooldown:12,duration:4,description:'Restore 8 health; incoming damage is reduced for four seconds.'},
+ zohan:{name:'Style Step',cooldown:8,duration:4,description:'Reset dash cooldown and gain a speed burst.'},
+ longfellow:{name:'Hometown Hero',cooldown:13,duration:0,description:'Restore 12 health and 35 guard immediately.'},
+ hubie:{name:'Safety First',cooldown:11,duration:5,description:'Refill guard and absorb much of the next incoming hit.'},
+};
