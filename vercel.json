@@ -1,0 +1,1 @@
+{"framework":"vite","buildCommand":"npm test && npm run build","outputDirectory":"dist","installCommand":"npm install"}
