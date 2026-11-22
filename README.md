@@ -23,6 +23,7 @@ GitHub Actions runs on pushes and pull requests: deterministic unit tests, produ
 - P1: WASD, J light, K heavy, L guard, I hype special, left Shift dash, Space jump. P2 (local): arrows, numpad 1–4, right Shift dash, numpad 0 jump.
 - Attacks have startup, active and recovery phases, with input buffering, gravity, velocity-based knockback, hit-stop, guard stamina and perfectly timed parries. Simultaneous hits can trade.
 - Each fighter has a distinct cooldown skill (U / numpad 5), in addition to their hype-powered ultimate. Arcade mode is a five-opponent ladder with a locally saved high-water mark.
+- Rookie, Normal, Hard and Expert CPU settings adjust decision frequency, reaction delay, defensive timing, aggression and skill/ultimate usage without changing the fighters' health or damage. Difficulty can be changed in the lobby or during solo play; the choice is saved locally.
 - Mobile controls include an independent multitouch joystick and action buttons for jump, dash, guard, skill, light, heavy, and hype. The UI adapts to portrait and landscape; touch devices default to lower rendering quality.
 
 ## Audio
